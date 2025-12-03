@@ -6,6 +6,7 @@ import Typography from "./components/Typography";
 import Card from "./components/Card";
 import DailyBudget from "./components/DailyBudget";
 import SavingsStatus from "./components/SavingsStatus";
+import Transactions from "./components/Transactions";
 import styles from "./app.module.css";
 
 function App() {
@@ -41,7 +42,9 @@ function App() {
 
             <Card>
               <Card.Header>Movimentação financeira</Card.Header>
-              <Card.Body>R$ 200,00</Card.Body>
+              <Card.Body>
+                <Transactions />
+              </Card.Body>
             </Card>
 
             <Card>
