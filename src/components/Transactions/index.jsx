@@ -1,7 +1,8 @@
+import { Fragment } from "react";
 import ButtonCard from "../ButtonCard";
 import { IconCurrency } from "../icons";
+import ListCard from "../ListCard";
 import TransactionItem from "../TransactionItem";
-import styles from "./transactions.module.css";
 
 const Transactions = () => {
   const transactions = [
@@ -23,8 +24,8 @@ const Transactions = () => {
   ];
 
   return (
-    <>
-      <ul className={styles.list}>
+    <Fragment>
+      <ListCard>
         {transactions.map((transaction, index) => {
           return (
             <li key={index}>
@@ -32,12 +33,12 @@ const Transactions = () => {
             </li>
           );
         })}
-      </ul>
+      </ListCard>
 
       <ButtonCard>
         <IconCurrency /> Adicionar transação
       </ButtonCard>
-    </>
+    </Fragment>
   );
 };
 
